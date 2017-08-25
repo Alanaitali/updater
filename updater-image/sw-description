@@ -1,0 +1,13 @@
+software =
+{
+ 	version = "0.1.0";
+        images: (
+                {
+                    filename = "qt-image-imx7s-warp-20170727120451.rootfs.ext4.gz";
+                    device = "/dev/mmcblk2p2";
+                    type = "raw";
+                    sha256 = "38d308f998b48a6f1324484c8f859c1801506b3da8da0e20b30f689da5f0ab95";
+		    compressed = true;
+                }
+        );
+}

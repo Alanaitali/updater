@@ -1,0 +1,28 @@
+software =
+{
+ 	version = "0.1.0";
+        images: (
+                {
+                    filename = "qt-image-imx7s-warp-20170713085101.rootfs.ext4.gz";
+                    device = "/dev/mmcblk2p2";
+                    type = "raw";
+                    sha256 = "ef42ce247a69115e5a8b4818b55ab1cc2e806f5c3ac1338b5876fc0362953306";
+		    compressed = true;
+                }
+        );
+ 	files: (
+                {
+                        filename = "imx7s-warp.dtb";
+                        path = "/media/imx7s-warp.dtb";
+                        sha256 = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855";
+                },
+
+        );
+	scripts: (
+       		  {
+                	filename = "updater.sh";
+                	type = "shellscript";
+			sha256 = "f31553b95af81f23781b994516f6b3d253ad1ce99465a07ff3b57d4498a96d79";
+       		 }
+	);
+}

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd Lien\ vers\ imx7s-warp
+dossier = $(ll | grep rootfs.sdcard.gz | tail -2 | head -1)
+cat $dossier
+

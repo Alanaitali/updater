@@ -1,0 +1,12 @@
+#!/bin/bash
+
+MODE="RSA"
+PRODUCT_NAME="myproduct"
+CONTAINER_VER="1.0"
+FILES="sw-description sw-description.sig resetnet-0.1-r0.cortexa7hf_neon.rpm"
+
+
+openssl dgst -sha256 -sign priv.pem sw-description > sw-description.sig
+
+for i in $FILES;do
+        echo $i;done | cpio -ov -H crc >  ${PRODUCT_NAME}_${CONTAINER_VER}.swu
